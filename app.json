@@ -1,0 +1,8 @@
+{
+  "name": "UNCC Chatbot",
+  "description": "Chatbot Server Using Express 4",
+  "repository": "https://github.com/BradStell/Uncc_chatbot_demo",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
