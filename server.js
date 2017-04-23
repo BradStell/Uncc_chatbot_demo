@@ -51,7 +51,12 @@ let params = {
     'return_analyzed_text': true
 };
 
-app.use(bodyParser.urlencoded({ extended: false })); 
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get('/', (req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello from /');
+});
 
 app.post('/receive', (req, res) => {
     console.log('Server hit /');
