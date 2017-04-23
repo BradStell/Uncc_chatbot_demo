@@ -6,6 +6,8 @@ const NLU_V1 = require('watson-developer-cloud/natural-language-understanding/v1
 const ConversationV1 = require('watson-developer-cloud/conversation/v1');
 let lastConvoContext;
 
+app.set('port', (process.env.PORT || 3333));
+
 const vans = {
     'old-school': 'https://www.dropbox.com/s/mpldv80yjh5faw8/vans_oldschool.jpg?raw=1',
     'normal': 'https://www.dropbox.com/s/ih6tuz6x0l62bye/vans-era-mens.jpg?raw=1',
@@ -147,6 +149,6 @@ app.post('/receive', (req, res) => {
     });    
 });
 
-app.listen(3333, () => {
-    console.log(`Server started at http://localhost:3333`);
+app.listen(app.get('port'), () => {
+    console.log('Node app is running on port', app.get('port'));
 });
